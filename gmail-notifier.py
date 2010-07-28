@@ -1,0 +1,12 @@
+import sys
+from PyQt4 import QtGui
+import SysTrayIcon as TrayIcons, SettingsWindow as Windows
+
+app = QtGui.QApplication(sys.argv)
+
+settings = Windows.SettingsWindow()
+trayIcon = TrayIcons.SysTrayIcon(QtGui.QIcon("icon.png"), settings)
+
+trayIcon.show()
+
+app.exec_()
